@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'appone',
     'bootstrap_admin',
+    'storages',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -80,16 +81,16 @@ WSGI_APPLICATION = 'trydjango18.wsgi.application'
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
 DATABASES = {
-    #'default': {
-    #    'ENGINE': 'django.db.backends.sqlite3',
-    #    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    #}
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
 
 import dj_database_url
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
-#DATABASES['default']['CONN_MAX_AGE'] = 500
+DATABASES['default']['CONN_MAX_AGE'] = 500
 
 
 # Internationalization

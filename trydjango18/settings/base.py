@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'appone',
     'bootstrap_admin',
+    'storages',
 )
 
 MIDDLEWARE_CLASSES = (
