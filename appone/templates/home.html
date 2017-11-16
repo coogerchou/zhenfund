@@ -1,0 +1,19 @@
+<h1>'Hello Word'</h1>
+<h1>{{template_title}}</h1>
+#POST means sending data
+#{% csrf_token %} means to avoid a token error
+#action means after the input the webpage will change to what is in the ''
+#as_p means to be displayed as paragraph
+<form method = 'POST' action = ''> {% csrf_token %}
+
+{{form.as_p}}
+
+<input type = 'submit' value = 'Join' />
+
+<!-- <input type = 'text'> 
+
+
+</input> -->
+
+
+</form>

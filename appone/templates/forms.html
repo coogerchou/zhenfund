@@ -1,0 +1,27 @@
+
+{% block body %}
+<div class = 'container'>
+
+	<h1> Enter Your @zhenfund.com email and the txt you want to transfer</h1>
+
+	<form method = 'POST' action = ''> 
+
+		{% csrf_token %}
+		{{form.as_p}}
+
+		<input type = 'submit' value = 'upload' />
+		<!-- <input type = 'text'> 
+		</input> -->
+
+	</form>
+
+	<h2>结果区域</h2>
+
+	<p>{{ result|linebreaks }}</p>
+
+	<a href="http://www.135editor.com/">复制以上代码，去 135 网站排版！</a>
+	<br/>
+	<br/>
+
+</div>
+{% endblock %}
